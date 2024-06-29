@@ -1,0 +1,10 @@
+*
+
+!.gitignore
+!hypr
+!home-manager
+!starship.toml
+!Code/
+!nix
+!nvim
+!rofi
