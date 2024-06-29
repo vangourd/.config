@@ -4,7 +4,7 @@
 !hypr
 !home-manager
 !starship.toml
-!Code/User/settings.json
+!code
 !nix
 !nvim
 !rofi

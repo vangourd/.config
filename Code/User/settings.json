@@ -1,0 +1,17 @@
+{
+    "window.menuBarVisibility": "toggle",
+    "dev.containers.dockerComposePath": "podman",
+    "dev.containers.dockerPath": "podman",
+    "glassit.alpha": 220,
+    "workbench.colorTheme": "Catppuccin Macchiato Darker Bordered",
+    "security.workspace.trust.untrustedFiles": "open",
+    "terminal.integrated.profiles.linux": {
+        "bash": {
+            "path": "/bin/bash",
+            "icon": "terminal-bash",
+            "args": [
+                "-l"
+            ]
+        }
+    }
+}
