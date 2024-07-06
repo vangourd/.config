@@ -23,6 +23,8 @@
     pkgs.neovim
 		pkgs.k9s
 		pkgs.starship
+		pkgs.nmap
+		pkgs.tig
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
