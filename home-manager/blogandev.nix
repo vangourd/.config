@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 
 {
+  nixpkgs.config.allowUnfree = true;
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
   home.username = "blogan";
@@ -20,13 +21,19 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.neovim
 		pkgs.k9s
+    pkgs.neovim
 		pkgs.starship
 		pkgs.nmap
 		pkgs.tig
 		pkgs.discord
 		pkgs.vscode
+		pkgs.wezterm
+		pkgs.bitwarden
+    pkgs.bash
+		pkgs.obsidian
+		pkgs.anki
+		pkgs.hyprland
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -79,4 +86,25 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
+
+  programs.wezterm = {
+		enable = true;
+		enableBashIntegration = true;
+		extraConfig = ''
+		  return { 
+			  enable_wayland = false,
+			}
+		'';
+	};
+
+  programs.bash = {
+    enable = true;
+    shellAliases = {
+      vi = ''nvim'';
+    };
+    bashrcExtra = ''
+    eval -- "$(/home/blogan/.nix-profile/bin/starship init bash --print-full-init)"
+    '';
+  };
+
 }
