@@ -36,6 +36,10 @@
 					# Optionally use extraSpecialArgs
 					# to pass through arguments to home.nix
 			};
+			"blogan@blurface" = home-manager.lib.homeManagerConfiguration {
+				inherit pkgs;
+				modules = [ ./blurface.nix ];
+			};
     };
 	};
 }

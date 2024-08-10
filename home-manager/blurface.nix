@@ -33,7 +33,7 @@
     pkgs.bash
 		pkgs.obsidian
 		pkgs.anki
-		pkgs.hyprland
+    pkgs.git
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -87,6 +87,17 @@
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  # Extra args for XDG Fix on Gnome
+	targets.genericLinux.enable = true;
+	xdg.mime.enable = true;
+  xdg.systemDirs.data = [ "${config.home.homeDirectory}/.nix-profile/share/applications" ];
+
+  programs.git = {
+    enable = true;
+    userName = "Brian Logan";
+    userEmail = "mail@brianlogan.com";
+	};
+
   programs.wezterm = {
 		enable = true;
 		enableBashIntegration = true;
@@ -101,6 +112,8 @@
     enable = true;
     shellAliases = {
       vi = ''nvim'';
+      gs = ''git status'';
+      gp = ''git pull'';
     };
     bashrcExtra = ''
     eval -- "$(/home/blogan/.nix-profile/bin/starship init bash --print-full-init)"
