@@ -34,6 +34,7 @@
 		pkgs.obsidian
 		pkgs.anki
 		pkgs.hyprland
+		pkgs.keepassxc
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -101,6 +102,8 @@
     enable = true;
     shellAliases = {
       vi = ''nvim'';
+			gs = ''git status'';
+			gp = ''git pull'';
     };
     bashrcExtra = ''
     eval -- "$(/home/blogan/.nix-profile/bin/starship init bash --print-full-init)"

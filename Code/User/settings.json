@@ -1,7 +1,6 @@
 {
     "window.menuBarVisibility": "toggle",
     "glassit.alpha": 220,
-    "workbench.colorTheme": "Catppuccin Macchiato Darker Bordered",
     "security.workspace.trust.untrustedFiles": "open",
     "terminal.integrated.profiles.linux": {
         "bash": {
@@ -11,5 +10,6 @@
                 "-l"
             ]
         }
-    }
+    },
+    "workbench.colorTheme": "Alt Catppuccin Macchiato"
 }
