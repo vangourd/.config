@@ -22,7 +22,6 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 		pkgs.k9s
-		pkgs.neovim
 		pkgs.starship
 		pkgs.nmap
 		pkgs.tig
@@ -33,8 +32,6 @@
     pkgs.bash
 		pkgs.obsidian
 		pkgs.anki
-    pkgs.git
-
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -92,11 +89,7 @@
 	xdg.mime.enable = true;
   xdg.systemDirs.data = [ "${config.home.homeDirectory}/.nix-profile/share/applications" ];
 
-  programs.git = {
-    enable = true;
-    userName = "Brian Logan";
-    userEmail = "mail@brianlogan.com";
-	};
+  
 
   programs.wezterm = {
 		enable = true;

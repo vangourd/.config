@@ -3,6 +3,7 @@
 !.gitignore
 !hypr
 !home-manager
+!home-manager/*
 !starship.toml
 !code
 !nix

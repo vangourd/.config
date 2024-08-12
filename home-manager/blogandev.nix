@@ -22,15 +22,11 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 		pkgs.k9s
-		pkgs.neovim
 		pkgs.starship
 		pkgs.nmap
 		pkgs.tig
 		pkgs.discord
-		pkgs.vscode
-		pkgs.wezterm
 		pkgs.bitwarden
-    pkgs.bash
 		pkgs.obsidian
 		pkgs.anki
 		pkgs.hyprland
@@ -48,6 +44,12 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+  ];
+
+  imports = [ 
+    ./programs/wezterm.nix
+    ./programs/bash.nix
+    ./programs/neovim.nix
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -82,32 +84,10 @@
   #  /etc/profiles/per-user/blogan/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  programs.wezterm = {
-		enable = true;
-		enableBashIntegration = true;
-		extraConfig = ''
-		  return { 
-			  enable_wayland = false,
-			}
-		'';
-	};
-
-  programs.bash = {
-    enable = true;
-    shellAliases = {
-      vi = ''nvim'';
-			gs = ''git status'';
-			gp = ''git pull'';
-    };
-    bashrcExtra = ''
-    eval -- "$(/home/blogan/.nix-profile/bin/starship init bash --print-full-init)"
-    '';
-  };
 
 }

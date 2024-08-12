@@ -22,7 +22,6 @@
   home.packages = [
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
-    pkgs.neovim
 		pkgs.k9s
 		pkgs.starship
 		pkgs.nmap
