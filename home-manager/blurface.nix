@@ -22,6 +22,7 @@
     # # Adds the 'hello' command to your environment. It prints a friendly
     # # "Hello, world!" when run.
 		pkgs.k9s
+		pkgs.neovim
 		pkgs.starship
 		pkgs.nmap
 		pkgs.tig
