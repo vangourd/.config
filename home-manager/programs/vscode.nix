@@ -6,9 +6,6 @@
 
     programs.vscode = {
         enable = true;
-        extensions = with pkgs.vscode-extensions; [
-            dooez.alt-catppuccin-vsc
-        ];
     };
 
 }

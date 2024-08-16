@@ -31,6 +31,18 @@
 		pkgs.anki
 		pkgs.hyprland
 		pkgs.keepassxc
+    pkgs.swww
+    pkgs.waybar
+		pkgs.
+		pkgs.fira-code
+		pkgs.fira-code-symbols
+		pkgs.font-awesome
+		pkgs.liberation_ttf
+		pkgs.nerdfonts
+		pkgs.noto-fonts
+		pkgs.noto-fonts-emoji
+		pkgs.proggyfonts
+		pkgs.xfce.thunar
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -50,7 +62,10 @@
     ./programs/wezterm.nix
     ./programs/bash.nix
     ./programs/neovim.nix
+		./programs/vscode.nix
   ];
+
+	fonts.fontconfig.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
