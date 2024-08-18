@@ -33,7 +33,6 @@
 		pkgs.keepassxc
     pkgs.swww
     pkgs.waybar
-		pkgs.
 		pkgs.fira-code
 		pkgs.fira-code-symbols
 		pkgs.font-awesome
